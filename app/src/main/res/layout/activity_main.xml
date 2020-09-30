@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E8E3C9">
+
+    <ImageView
+        android:id="@+id/searchphotoup"
+        android:layout_width="420dp"
+        android:layout_height="120dp"
+        android:src="@drawable/search_product"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_bar"
+        android:paddingTop="16dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_magnifying_glass"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="380dp"
+        android:layout_height="230dp"
+        android:src="@drawable/camera"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/searchphotoup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtcamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:paddingLeft="18dp"
+        android:paddingTop="120dp"
+        app:layout_constraintTop_toBottomOf="@id/searchphotoup"
+        app:layout_constraintLeft_toLeftOf="@id/camera"
+        app:layout_constraintBottom_toBottomOf="@id/camera"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:paddingLeft="18dp"
+        android:text="New Product From FujiFilm"
+        app:layout_constraintTop_toBottomOf="@id/txtcamera"
+        app:layout_constraintLeft_toLeftOf="@id/txtcamera"/>
+
+    <ImageView
+        android:id="@+id/searchphotonext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/search_product"
+        app:layout_constraintTop_toBottomOf="@id/camera"/>
+
+    <TextView
+        android:id="@+id/browsetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BROWSE BY"
+        android:textSize="20dp"
+        android:paddingRight="80dp"
+        android:paddingTop="40dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/camera"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="brand"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="80dp"
+        android:background="@color/btncolor"
+        app:layout_constraintRight_toRightOf="@id/browsetxt"
+        app:layout_constraintLeft_toLeftOf="@id/browsetxt"
+        app:layout_constraintTop_toBottomOf="@+id/browsetxt"/>
+ <TextView
+    android:id="@+id/txtlastest"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="| Lastest Arrival"
+    android:paddingLeft="8dp"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/searchphotonext"/>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:text="view all"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="#FB6B3E"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchphotonext"/>
+<fragment
+    android:id="@+id/clothesfragmentcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:name="com.example.fragmentassignment.clothesfragment"
+    app:layout_constraintTop_toBottomOf="@id/txtlastest"
+    app:layout_constraintBottom_toTopOf="@id/searchphoto"/>
+
+    <ImageView
+        android:id="@+id/searchphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/search_product"
+        app:layout_constraintTop_toBottomOf="@id/clothesfragmentcontainer"/>
+
+    <TextView
+        android:id="@+id/txtcant"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="CAN'T FIND WHAT YOU                        LOOKING FOR?     SEARCH BY"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:paddingTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/searchphoto"/>
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:text="UPLOAD PICTURE"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@color/btncolor"
+        app:layout_constraintTop_toBottomOf="@id/txtcant"
+        app:layout_constraintLeft_toLeftOf="@id/txtcant"/>
+    <TextView
+        android:id="@+id/txtcountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="| Choose By Country"
+        android:paddingLeft="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/searchphoto"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <fragment
+        android:id="@+id/countryfragmentcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.fragmentassignment.countryfragment"
+        app:layout_constraintTop_toBottomOf="@id/txtcountry"/>
+
+    <ImageView
+        android:id="@+id/cusservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/countryfragmentcontainer"
+        android:src="@drawable/customer_services"/>
+
+    <TextView
+        android:id="@+id/txtcuservice"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="NEED HELP? CUSTOMER SERVICE"
+        android:textSize="18dp"
+        android:paddingTop="40dp"
+        app:layout_constraintTop_toTopOf="@id/cusservice"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtpopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="| Popular Products"
+        android:paddingLeft="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cusservice"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:text="call now"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@color/btncolor"
+        android:drawableRight="@drawable/ic_phone_black_24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtcuservice"
+        app:layout_constraintLeft_toLeftOf="@id/txtcuservice"/>
+    <fragment
+        android:id="@+id/productsfragment"
+        android:name="com.example.fragmentassignment.productsfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtpopular" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
